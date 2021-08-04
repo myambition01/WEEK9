@@ -4,7 +4,7 @@ const userRoutes = require("./routers/userRoute");
 const db = require("./config/db")
 
 const app = express()
-const port= 8000
+const port= process.env.port || 8000
 
 db()
 app.use(express.urlencoded({extended:true}));
